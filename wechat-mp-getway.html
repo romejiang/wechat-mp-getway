@@ -45,10 +45,16 @@
             }
             return url;
         }
+        // =====================================================
+        // redirect_url 和 debug 两个参数可以修改调节  =============
+        // =====================================================
         var redirect_url = "http://localhost:3000";
+        var debug = false;
+        // =====================================================
+        // =====================================================
+
         var code = getUrlParams('code');
         var state = getUrlParams('state');
-        var debug = getUrlParams('debug');
 
         if (code !== undefined) {
             var redirectUrl = appendParams([
